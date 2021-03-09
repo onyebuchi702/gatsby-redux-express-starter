@@ -1,9 +1,0 @@
-{
-  "contentful_url": "https://cdn.contentful.com/",
-	"contentful": {
-		"spaceID": "kmyahsy08mbl",
-		"accessToken": "GNluBnlJEpq0nfcjGMBPSY5ab3sjKuwYhd4H9YNtKFY"
-	},
-  "click2sure": "https://getsure-dev.click2sure.co.za/api/v1/",
-  "leads": "https://getsure-leads-api-https-getsure-dev.apps.c2.mbcd.io/"
-}

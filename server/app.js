@@ -1,5 +1,5 @@
 const express = require('express')
-// const gatsbyExpress = require('gatsby-plugin-express');
+const gatsbyExpress = require('gatsby-plugin-express');
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -41,12 +41,12 @@ app.use('/contentful', contentful);
 
 // serve static files before gatsbyExpress
 app.use(express.static('public/'));
-// app.use(gatsbyExpress('config/gatsby-express.json', {
-//   publicDir: 'public/',
-//
-//   // redirects all /path/ to /path
-//   // should be used with gatsby-plugin-remove-trailing-slashes
-//   redirectSlashes: true,
-// }));
+app.use(gatsbyExpress('config/gatsby-express.json', {
+  publicDir: 'public/',
+
+  // redirects all /path/ to /path
+  // should be used with gatsby-plugin-remove-trailing-slashes
+  redirectSlashes: true,
+}));
 
 app.listen(PORT, () => console.log(`gatsby redux app is listening on port ${PORT}!`))

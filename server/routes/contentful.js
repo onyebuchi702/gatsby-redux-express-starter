@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
 	try {
 		const response = await axios
 			.get(
-				`${'https://cdn.contentful.com/'}spaces/${'xxxx'}/entries?access_token=${'xxx'}`,
+				`${'https://cdn.contentful.com/'}spaces/${'kmyahsy08mbl'}/entries?access_token=${'GNluBnlJEpq0nfcjGMBPSY5ab3sjKuwYhd4H9YNtKFY'}`,
 				{}
 			)
 			.then((response) => {
