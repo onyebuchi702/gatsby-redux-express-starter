@@ -1,13 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { connect } from 'react-redux'
 import { useSelector, useDispatch } from 'react-redux'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { toggleDarkMode } from '../state/action/toggleAction'
+import { toggleDarkMode } from '../redux/action/toggleAction'
 
 const IndexPage = () => {
   const { isDarkMode } = useSelector(state => state.isDarkMode)
@@ -30,7 +29,7 @@ const IndexPage = () => {
       <button
         style={isDarkMode ? { background: 'black', color: 'white' } : null}
         onClick={() => dispatch(toggleDarkMode(!isDarkMode))}>
-        Dark Mode
+        Dark Mode &nbsp;
         {isDarkMode ? 'On' : 'Off'}
       </button>
       <p>
