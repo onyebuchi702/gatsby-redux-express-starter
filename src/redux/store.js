@@ -7,17 +7,13 @@ const initialState = {
   isDarkMode: false,
 };
 
-const reducer = {
+const reducer = combineReducers({
   isDarkMode: toggleReducer
-}
-
-const rootReducer = combineReducers(
-  reducer,
-  initialState,
-);
+})
 
 const store = createStore(
-  rootReducer,
+  reducer,
+  initialState,
   composeWithDevTools(
     applyMiddleware( thunk )
   )
